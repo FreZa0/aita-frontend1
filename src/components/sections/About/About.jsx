@@ -1,12 +1,13 @@
+import img from "./../../../../public/paperbg1.png"
 export function About() {
   return (
     <section id="about" className="py-10 mb-8 sm:mb-12 md:mb-16">
       <div className="bg-[#FFFCF6] flex items-center min-h-screen p-4 mt-10 sm:mt-16 md:mt-20">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 md:py-12">
-          <div className="bg-[url(./public/paperbg1.png)] 
-          relative min-h-[400px] sm:min-h-[450px] md:min-h-[500px] 
-          bg-center bg-no-repeat bg-cover sm:bg-cover md:bg-cover 
-          flex items-center">
+          <div className={`bg-[url{${img})] 
+            relative min-h-[400px] sm:min-h-[450px] md:min-h-[500px] 
+            bg-center bg-no-repeat bg-cover sm:bg-cover md:bg-cover 
+            flex items-center`}>
             <div className="relative p-4 sm:p-8 md:p-12 lg:p-16 xl:p-24 
             w-full h-full flex flex-col justify-center"> 
               <p className="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl 
