@@ -1,25 +1,34 @@
 import FavoriteButton from '../../../FavoriteButton'
 
-export function PaperCard({image, cost}) {
+export function PaperCard({ image, title, description, cost }) {
     return (
-        <div className="relative w-full sm:w-[280px] md:w-[300px] h-[250px] sm:h-[280px] md:h-[300px] rounded-lg overflow-hidden 
-        bg-[#FFFCF6] shadow-lg transition-transform 
-        will-change-transform duration-300 hover:scale-105">
+        <article className="group relative w-full sm:w-[280px] md:w-[300px] h-[320px] sm:h-[340px] rounded-2xl overflow-hidden 
+        bg-[#FFFCF6] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
             <img
                 src={image}
-                alt="Papers"
-                className="w-full h-full object-cover"
+                alt={title}
+                className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
 
-            {/* Градиент и информация внизу */}
-            <div className="absolute bottom-0 left-0 w-full p-2 sm:p-3 md:p-4">
-                <div className="flex items-center justify-end">
-                    <div className="z-10"> 
-                        <FavoriteButton />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent pointer-events-none" />
+
+            <div className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4">
+                <div className="flex justify-end">
+                    <FavoriteButton />
+                </div>
+
+                <div className="text-white drop-shadow-md space-y-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                        <h3 className="text-lg sm:text-xl font-semibold tracking-tight">
+                            {title}
+                        </h3>
                     </div>
+                    <p className="text-xs sm:text-sm leading-relaxed text-white/90">
+                        {description}
+                    </p>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 

@@ -82,7 +82,7 @@ function FavoriteButton() {
                 text-center transform hover:scale-105"
             >
                 {/* Текст кнопки, отображаемый пользователю */}
-                КУПИТЬ
+                ЗАКАЗАТЬ
             </a>
         {/* Закрывающий тег React Fragment */}
         </>

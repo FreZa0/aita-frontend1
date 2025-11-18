@@ -13,11 +13,10 @@ export function Catalog() {
       </div> 
       <div className="flex justify-center flex-wrap gap-4 sm:gap-6 mx-4 md:mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8">
         {
-          PAPERS.map(paper => (
+          PAPERS.map(({ name, ...paper }) => (
             <PaperCard
-              key={paper.name}
-              image={paper.image}
-              cost={paper.cost}
+              key={name}
+              {...paper}
             />
           ))
         }

@@ -66,7 +66,7 @@ export function Contacts() {
             <div className="space-y-3 text-sm sm:text-base text-gray-600">
               <div>
                 <p className="font-medium text-gray-800 mb-1">Адрес:</p>
-                <p>г. Якутск, ул. Примерная, 10</p>
+                <p>г. Якутск, ул. Проспект Михаила Николаева, 25</p>
               </div>
               <div>
                 <p className="font-medium text-gray-800 mb-1">Время работы:</p>
